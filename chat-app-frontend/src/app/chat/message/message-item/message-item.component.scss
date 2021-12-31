@@ -1,0 +1,19 @@
+@import "src/scss/base/variables";
+
+.message-item {
+  background-color: $color-grey-dark-2;
+  border-radius: 2rem;
+  margin: 2rem;
+  padding: 1.5rem 4rem;
+
+  &__header {
+    color: $color-accent-extra-light;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+
+  &__main {
+    white-space: pre-line;
+  }
+}

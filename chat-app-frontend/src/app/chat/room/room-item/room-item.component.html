@@ -1,0 +1,13 @@
+<div
+  class="room-item"
+  [ngClass]="{ 'room-item--active': isSelected }"
+  (click)="onClick()"
+>
+  <div class="room-item__logo">
+    <img [src]="room.logoUrl" class="room-item__image" />
+  </div>
+  <div class="room-item__titles">
+    <div class="room-item__title">{{ room.title }}</div>
+    <div class="room-item__subtitle">{{ room.subtitle }}</div>
+  </div>
+</div>

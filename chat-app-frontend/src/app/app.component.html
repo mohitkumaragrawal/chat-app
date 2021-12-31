@@ -1,0 +1,31 @@
+<div class="app-container">
+  <header class="header">
+    <div class="header__logo" routerLink="chat">C</div>
+    <div class="header__actions">
+      <div *ngIf="!isLoggedIn">
+        <a
+          routerLink="/login"
+          class="header__action"
+          routerLinkActive="header__action--active"
+        >
+          Login
+        </a>
+        <a
+          routerLink="/signup"
+          class="header__action"
+          routerLinkActive="header__action--active"
+        >
+          Sign Up
+        </a>
+      </div>
+
+      <div *ngIf="isLoggedIn">
+        <button class="btn" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main [@triggerName]="prepareOutlet(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </main>
+</div>

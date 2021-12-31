@@ -1,0 +1,6 @@
+<div class="rooms">
+  <app-room-item
+    *ngFor="let room of getRooms() | async"
+    [room]="room"
+  ></app-room-item>
+</div>

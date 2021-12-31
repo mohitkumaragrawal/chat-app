@@ -1,0 +1,81 @@
+// global styles for form.
+.form-group {
+  flex: 1;
+  margin-top: 2.5rem;
+
+  &__input {
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: $color-grey-dark-2;
+    color: $color-grey-light-1;
+    font: inherit;
+    outline: none;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-grey-dark-3;
+    }
+
+    &:focus {
+      // has an !important to give it more specificity and not rely on ordering, because we need this
+      // styling even when .ng-invalid .ng-touched is active.
+      border: 2px solid $color-accent-extra-light;
+      box-shadow: 0 0 4rem rgba($color: $color-accent-light, $alpha: 0.4);
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+
+    // These classes are automatically added by angular if shitty data is entered.
+    &.ng-invalid.ng-touched {
+      border: 2px solid $color-error;
+      box-shadow: 0 0 2rem rgba($color: $color-error, $alpha: 0.4);
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+
+    &::after {
+      content: ":";
+    }
+  }
+}
+
+.form-split {
+  display: flex;
+  margin-top: 2.5rem;
+
+  & > * {
+    flex: 1;
+    margin-top: 0;
+  }
+
+  .form-group:not(:last-child) {
+    margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $screen-width-small) {
+    display: block;
+
+    .form-group:not(:last-child) {
+      margin-right: 0;
+    }
+
+    .form-group:not(:first-child) {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}

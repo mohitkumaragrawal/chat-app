@@ -1,0 +1,42 @@
+.btn {
+  padding: 1.2rem 5rem;
+  font: inherit;
+  font-weight: 600;
+  font-size: 1.1em;
+  border-radius: 100px;
+  //background-color: $color-accent;
+  background: linear-gradient(
+    to bottom right,
+    $color-accent-light,
+    $color-accent
+  );
+  color: $color-grey-light-1;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba($color-accent-light, 0.7);
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 0.7rem rgba($color-accent-light, 0.7);
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    background: linear-gradient(
+      to bottom right,
+      $color-grey-dark-2,
+      $color-grey-dark-4
+    );
+    box-shadow: none;
+    transform: none;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,8 @@
+<div class="messages">
+  <div *ngFor="let message of messages">
+    <app-message-item
+      [message]="message"
+      *ngIf="canShow(message)"
+    ></app-message-item>
+  </div>
+</div>

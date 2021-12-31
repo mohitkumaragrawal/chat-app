@@ -1,0 +1,71 @@
+@import "src/scss/base/variables";
+
+.chat-container {
+  height: 100%;
+  //overflow-y: hidden;
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-column {
+  overflow-y: hidden;
+  border-right: 1px solid $color-grey-dark-4;
+}
+
+.chat-column {
+  flex: 1;
+}
+
+.column-header {
+  display: flex;
+  flex: 0 0 6rem;
+  align-items: center;
+  flex-direction: row;
+
+  border-bottom: 1px solid $color-grey-dark-4;
+}
+
+.heading-button {
+  flex: 0 0 auto;
+  padding: 1rem 1.3rem;
+  margin-right: 1rem;
+  font-size: 1.2em;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.message-input {
+  padding-right: 10rem;
+  border-radius: 0;
+  box-shadow: none;
+  height: 8rem;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .message-input {
+    flex: 1;
+  }
+
+  .message-button {
+    padding: 1rem 1.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:active {
+      transform: translateY(-50%) translateY(1px);
+    }
+  }
+}

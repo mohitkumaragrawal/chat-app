@@ -1,0 +1,41 @@
+.header {
+  background-color: $color-grey-dark-2;
+  color: $color-grey-light-1;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    background-color: $color-accent-light;
+    color: $color-grey-light-1;
+    font-weight: 800;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    user-select: none;
+  }
+
+  &__action:link,
+  &__action:visited {
+    color: $color-grey-light-1;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    transition: color 0.2s;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid transparent;
+  }
+
+  &__action:hover {
+    color: $color-accent-extra-light;
+  }
+
+  &__action--active:link,
+  &__action--active:visited {
+    color: $color-accent-light;
+    border-bottom: 3px solid currentColor;
+  }
+}

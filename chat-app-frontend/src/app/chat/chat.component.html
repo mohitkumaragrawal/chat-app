@@ -1,0 +1,34 @@
+<div class="chat-container">
+  <div class="column room-column">
+    <div class="column-header">
+      <div class="heading-secondary">Rooms</div>
+      <button class="btn heading-button" routerLink="/addroom">+</button>
+    </div>
+
+    <div class="room-main main">
+      <app-room></app-room>
+    </div>
+  </div>
+  <div class="chat-column column">
+    <div class="column-header">
+      <div class="heading-secondary">Chat</div>
+    </div>
+
+    <div class="main chat-main">
+      <app-message></app-message>
+    </div>
+
+    <form class="chat-input" #form="ngForm" (submit)="submitChat(form)">
+      <input
+        class="form-group__input message-input"
+        type="text"
+        placeholder="Type some messages..."
+        name="message"
+        autocomplete="off"
+        ngModel
+      />
+
+      <button class="btn message-button" type="submit">Send</button>
+    </form>
+  </div>
+</div>

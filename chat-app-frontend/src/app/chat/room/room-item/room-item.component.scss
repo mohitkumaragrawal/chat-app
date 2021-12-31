@@ -1,0 +1,60 @@
+@import "src/scss/base/variables";
+
+.room-item {
+  //background-color: $color-grey-dark-3;
+  display: flex;
+  border-radius: 2rem;
+  margin: 1.5rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.4rem;
+
+  &:hover {
+    background-color: $color-grey-dark-3;
+  }
+
+  &:active {
+    background-color: $color-grey-dark-2;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__logo {
+    width: 5rem;
+    height: 5rem;
+    background-color: $color-grey-light-2;
+    border-radius: 500px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &__titles {
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__title {
+    font-size: 1.05em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    color: $color-grey-light-2;
+    font-size: 0.8em;
+    text-transform: capitalize;
+  }
+
+  &--active {
+    background-color: $color-grey-dark-4;
+  }
+}
